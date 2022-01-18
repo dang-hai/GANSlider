@@ -1,0 +1,39 @@
+.base-page {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #7F8990;
+}
+
+.base-page a:link {
+    color: #009260;
+}
+
+.base-page a:visited {
+    color: #48535A
+}
+
+.base-page h1 {
+    font-size: 2em;
+    color: #48535A;
+    font-weight: 600;
+}
+
+.base-page h2 {
+    font-size: 1.5em;
+    color: #48535A;
+    font-weight: 600; 
+}
+
+nav {
+    height: 100px;
+}
+
+.brand-logo {
+    width: 300px;
+    height: 100%;
+    background-image: url("logo.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

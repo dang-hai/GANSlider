@@ -1,0 +1,33 @@
+.survey-page-root {
+    max-width: 1024px;
+    padding: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.likert-scale-root {
+    width: 800px;
+    margin-bottom: 32px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid lightgrey
+}
+
+.nasa-tlx-root {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 64px;
+    width: 800px;
+    padding-left: 16px;
+}
+
+.nasa-tlx-root h1 {
+    margin-bottom: 42px;
+}
+
+.nasa-dimension-root {
+    margin-bottom: 32px;
+}

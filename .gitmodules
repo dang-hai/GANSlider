@@ -1,0 +1,3 @@
+[submodule "backend/ganspace"]
+	path = backend/ganspace
+	url = https://github.com/harskish/ganspace.git

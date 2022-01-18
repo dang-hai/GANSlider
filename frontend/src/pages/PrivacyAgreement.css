@@ -1,0 +1,47 @@
+.privacy-agreement-page {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
+}
+
+.privacy-agreement-page h1{
+    margin-bottom: 3em;
+}
+
+.privacy-agreement-page-section-point {
+    font-weight: 600;
+    color: #48535A;
+}
+
+.privacy-agreement-page-sec2 {
+    margin-top: 10em;
+}
+
+#agreed-checkbox {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 1em;
+    align-items: center;
+}
+
+#agreed-checkbox input {
+    width: 32px;
+    height: 32px;
+}
+
+.button-next {
+    display: block;
+    font-size: 24px;
+    padding: 16px 42px;
+    background-color: #009260;
+    color: white !important; 
+    border-radius: 8px;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    text-align: center;
+    text-decoration: none;
+}
