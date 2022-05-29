@@ -10,12 +10,13 @@
 > **GANSlider: How Users Control Generative Models for Images]{GANSlider: How Users Control Generative Models for Images using Multiple Sliders with and without Feedforward Information**<br>
 > Hai Dang<sup>1</sup>, Lukas Mecke<sup>2,3</sup>, Daniel Buschek<sup>1</sup><br>
 > <sup>1</sup>University of Bayreuth, <sup>2</sup>Bundeswehr University Munich, <sup>3</sup>LMU Munich<br>
-> <p align="justify"><b>Paper Link:</b> 
+> <p align="justify"><b>Paper Link:</b></p>
   > <a href="https://arxiv.org/abs/2202.00965">https://arxiv.org/abs/2202.00965</a>
 >
 > <p align="justify"><b>Abstract:</b> <i>We investigate how multiple sliders with and without feedforward visualizations influence users' control of generative models. In an online study (N=138), we collected a dataset of people interacting with a generative adversarial network (\textit{StyleGAN2}) in an image reconstruction task. We found that more control dimensions (sliders) significantly increase task difficulty and user actions. Visual feedforward partly mitigates this by enabling more goal-directed interaction. However, we found no evidence of faster or more accurate task performance. This indicates a tradeoff between feedforward detail and implied cognitive costs, such as attention. Moreover, we found that visualizations alone are not always sufficient for users to understand individual control dimensions. Our study quantifies fundamental UI design factors and resulting interaction behavior in this context, revealing opportunities for improvement in the UI design for interactive applications of generative models. We close by discussing design directions and further aspects.</i></p>
-> <p align="justify"><b>Video:</b> 
-> TBA
+> <p align="justify"><b>Video:</b></p> 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zaGc5OsQhlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## System tested with
 
@@ -64,8 +65,12 @@ REACT_APP_ROOT_DIR = "/" **
 4. Open Browser and navigate to: `http://localhost:8888/user-study?PROLIFIC_PID=mock_id&STUDY_ID=mock_id&SESSION_ID=mock_session`
 
 
-# Run with Windows (without WSL 2) in DEBUG MODE
-1. Install Nvidida Driver
+# Run with Windows (without WSL 2)
+1. Setup submodules: `git submodule update --init --recursive`
+    - [Quickfix - Google Drive Virus Check] Download the ffhq file from https://drive.google.com/uc?export=download&id=1FJRwzAkV-XWbxgTwxEmEACvuqF5DsBiV
+    - Rename the downloaded file to `stylegan2_ffhq_1024.pt`
+    - Move that file to `.backend\ganspace\models\checkpoints\stylegan2\`
+
 2. Setup Backend
     - Change to the *backend* directory
     - Install dependencies: ```pip install -r requirements.txt```
