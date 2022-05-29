@@ -36,8 +36,9 @@ from src.user_study import UserStudy
 
 DEBUGGING = os.environ.get('GANSLIDER_DEBUGGING', 'False').lower() in [
     'true', '1', 't']
-# TARGET_STUDY_ID = os.environ.get('PROLIFIC_STUDY_ID', "unknown")
 ROOT_DIR = os.environ.get('GANSLIDER_ROOT_DIR', '/')
+BACKEND_SERVE = os.environ.get('GANSLIDER_BACKEND_SERVE', 'False').lower() in [
+    'true', '1', 't']
 
 pca_stylegan_generator = PCAStyleGan()
 
@@ -47,6 +48,8 @@ user_study = UserStudy()
 logger = Logger(__name__)
 logger.info(["DEBUGGING on:", DEBUGGING])
 logger.info(["ROOT_DIR", ROOT_DIR])
+logger.info(["Serve wepapp from backend:", BACKEND_SERVE])
+
 
 lock = threading.Semaphore(1)
 
@@ -264,6 +267,7 @@ def log_slider_filmstrip_update(update: FilmstripUpdate, PROLIFIC_PID: str = Coo
 @app.middleware("http")
 async def check_cookie(request: Request, call_next):
     pid = request.cookies.get('PROLIFIC_PID')
+
     if '/user-study' not in request.url.path and not pid:
         return JSONResponse(status_code=401, content={"msg": "You are not authorized to participate in this user study."})
 
@@ -271,4 +275,5 @@ async def check_cookie(request: Request, call_next):
     return response
 
 
-# app.mount("/", StaticFiles(directory="../frontend/public", html=True))
+if BACKEND_SERVE:
+    app.mount("/", StaticFiles(directory="../frontend/build", html=True))

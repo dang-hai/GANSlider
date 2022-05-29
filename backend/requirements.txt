@@ -1,4 +1,5 @@
 cython
+pandas
 pillow==6.2
 ffmpeg
 tqdm

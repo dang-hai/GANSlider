@@ -3,7 +3,9 @@ import os
 import time
 from typing import Dict, List
 
+import pymongo
 from pymongo import MongoClient
+
 
 DATABASE_NAME = os.getenv("GANSLIDER_LOG_DATABASE", "GANSLIDER_DB_DEFAULT")
 DEBUGGING = os.environ.get('GANSLIDER_DEBUGGING', 'False').lower() in [
@@ -23,8 +25,11 @@ class Logger:
 
         self.extra = {"color": "\033[0m"}
 
-        self.client = MongoClient(host="mongodb", port=27017)
-        self.db = self.client[DATABASE_NAME]
+        try:
+            self.client = MongoClient(host="mongodb", port=27017)
+            self.db = self.client[DATABASE_NAME]
+        except pymongo.error.ConnectionFailure as err:
+            self.logger.warn("Failed to connect to mongo database. Continue without database...")
 
     def info(self, msg):
         self.logger.info(msg, extra=self.extra)
