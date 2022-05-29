@@ -17,7 +17,7 @@
 > <p align="justify"><b>Video:</b></p> 
 
 
-[![Alt text](https://www.youtube.com/embed/zaGc5OsQhlk)](https://www.youtube.com/watch?v=zaGc5OsQhlk)
+[![Video](https://img.youtube.com/vi/zaGc5OsQhlk/maxresdefault.jpg)](https://www.youtube.com/watch?v=zaGc5OsQhlk)
 
 
 ## System tested with
