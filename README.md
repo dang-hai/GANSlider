@@ -7,7 +7,7 @@
 
 <img src="./static/teaser.png" alt="Teaser figure" width="1024px"/>
 
-> **GANSlider: How Users Control Generative Models for Images]{GANSlider: How Users Control Generative Models for Images using Multiple Sliders with and without Feedforward Information**<br>
+> **GANSlider: How Users Control Generative Models for Images using Multiple Sliders with and without Feedforward Information**<br>
 > Hai Dang<sup>1</sup>, Lukas Mecke<sup>2,3</sup>, Daniel Buschek<sup>1</sup><br>
 > <sup>1</sup>University of Bayreuth, <sup>2</sup>Bundeswehr University Munich, <sup>3</sup>LMU Munich<br>
 > <p align="justify"><b>Paper Link:</b></p>
